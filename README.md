@@ -6,4 +6,4 @@
 
 ### Desktop UI
 
-![Screenshot](./screenshot/screenshot.PNG)
+![Screenshot](./screenshot/screenshot.webp)
