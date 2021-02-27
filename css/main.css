@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700;900&display=swap');
+body{
+    font-family: 'Jost', sans-serif;
+    background-color: var(--bg-color);
+    padding-left: 100px;
+    padding-top: 100px;
+}
+:root{
+    --bg-color: #f0f9ff;
+    --text-color: #160b38;
+    --dark-btn: #3B1C99;
+    --soft-btn: #8054F6;
+}
+.H1-Jost{
+    position: relative;
+    font-family: 'Jost', sans-serif;
+    font-size: 93px;
+    font-weight: 900;
+    line-height: 135px;
+    color: var(--text-color);
+    margin: 0;
+}
+.H1-Jost:before{
+    content: " ";
+    background-image: url(../img/TitleCorner.png);
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 35px;
+    height: 39px;
+    transform: rotate(8deg);
+}
+.H2-Jost{
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 46px;
+    color: var(--text-color);
+    margin: 0;
+}
+.Menu-Links{
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.Dark-Btn{
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #fff;
+    background-color: var(--dark-btn);
+    width: 200px;
+    height: 70px;
+    border-radius: 20px 20px 0px 20px;
+}
+.Soft-Btn{
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #fff;
+    background-color: var(--soft-btn);
+    width: 200px;
+    height: 70px;
+    border-radius: 20px 20px 0px 20px;
+}
