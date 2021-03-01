@@ -2,8 +2,6 @@
 body{
     font-family: 'Jost', sans-serif;
     background-color: var(--bg-color);
-    padding-left: 100px;
-    padding-top: 100px;
 }
 :root{
     --bg-color: #f0f9ff;
@@ -58,6 +56,7 @@ body{
     width: 200px;
     height: 70px;
     border-radius: 20px 20px 0px 20px;
+    cursor: pointer;
 }
 .Soft-Btn{
     font-family: 'Jost', sans-serif;
@@ -69,4 +68,49 @@ body{
     width: 200px;
     height: 70px;
     border-radius: 20px 20px 0px 20px;
+    cursor: pointer;
+}
+.Container{
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.Navbar{
+    display: grid;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    margin-top: 35px;
+    height: 70px;
+}
+.Navbar ul{
+    margin: 0;
+    margin-left: auto;
+}
+.Navbar ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.Navbar ul li:last-child{
+    margin-right: 0px;
+}
+.Content_404{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.MessageText{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.MessageText button{
+    margin-top: 40px;
+}
+.Illus{
+    padding-top: 100px;
+}
+.Illus img{
+    width: 700px;
 }

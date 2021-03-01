@@ -9,25 +9,31 @@
     <title>404 Error Page</title>
 </head>
 <body>
-    <h1 class="H1-Jost">Oooops !</h1>
-    <h2 class="H2-Jost">We can’t seem to find a page you <br> are looking for </h2>
-    <br> <br>
-    <a class="Menu-Links" href="">This is a Menu Links</a>
 
-    <br> <br> <br> <br>
-
-    <button class="Dark-Btn">Contact us</button>
-
-    <br> <br>
-
-    <button class="Soft-Btn">Back to home</button>
-
-    <br> <br> <br> <br>
-
-    <img src="./img/Logotype.svg" alt="" width="200px">
-    <br> <br>
-    <img src="./img/Illu404.svg" alt="" width="400px">
-
+    <div class="Container">
+        <nav class="Navbar">
+            <div class="LogoBox">
+                <img src="./img/Logotype.svg" alt="" width="200px">
+            </div>
+            <ul>
+                <li><a class="Menu-Links" href="">Home</a></li>
+                <li><a class="Menu-Links" href="">About us</a></li>
+                <li><a class="Menu-Links" href="">Pricing</a></li>
+                <li><a class="Menu-Links" href="">FAQ's</a></li>
+                <li><button class="Dark-Btn">Contact us</button></li>
+            </ul>
+        </nav>
+        <div class="Content_404">
+            <div class="MessageText">
+                <h1 class="H1-Jost">Oooops !</h1>
+                <h2 class="H2-Jost">We can’t seem to find a page you <br> are looking for </h2>
+                <button class="Soft-Btn">Back to home</button>
+            </div>
+            <div class="Illus">
+                <img src="./img/Illu404.svg" alt="" width="400px">
+            </div>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>
