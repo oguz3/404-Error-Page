@@ -2,6 +2,7 @@
 body{
     font-family: 'Jost', sans-serif;
     background-color: var(--bg-color);
+    width: 100vw;
 }
 :root{
     --bg-color: #f0f9ff;
@@ -78,16 +79,52 @@ body{
     padding-left: 15px;
     padding-right: 15px;
 }
+.Container::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 0px;
+    width: 500px;
+    height: 800px;
+    background-image: url('../img/Shape-background.png');
+}
 .Navbar{
     display: grid;
     grid-template-columns: 200px auto;
     align-items: center;
-    margin-top: 35px;
+    padding-top: 35px;
     height: 70px;
+}
+.Menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #160b38;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 4px);
+    transform: rotate(-45deg) translate(-8px, 4px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-8px, -6px);
 }
 .Navbar ul{
     margin: 0;
     margin-left: auto;
+}
+.Navbar ul.Active{
+    display: block !important;
 }
 .Navbar ul li{
     display: inline-block;
@@ -99,6 +136,7 @@ body{
 .Content_404{
     display: grid;
     grid-template-columns: 50% 50%;
+    height: inherit;
 }
 .MessageText{
     display: flex;
@@ -113,4 +151,125 @@ body{
 }
 .Illus img{
     width: 700px;
+}
+@media screen and (max-width: 1400px) {
+    .Illus img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .Container {
+        max-width: 976px;
+        height: calc(100vh - 120px);
+    }
+    .Illus {
+        padding-top: 0px;
+        align-self: center;
+    }
+}
+@media screen and (max-width: 980px) {
+    .Container {
+        max-width: 768px;
+        height: calc(100vh - 75px);
+    }
+    .Menu-toggle{
+        display: block;
+        margin-left: auto;
+    }
+    .Navbar ul{
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 15px;
+        right: 15px;
+        background-color: rgb(222, 244, 255);
+        border-radius: 12px;
+        padding: 15px;
+        border: 2px solid rgb(59, 28, 153);
+        z-index: 9;
+    }
+    .Navbar ul li {
+        display: block;
+        margin: 20px 15px;
+    }
+    .Navbar {
+        display: grid;
+        grid-template-columns: 179px auto;
+        align-items: center;
+        padding-top: 25px;
+        height: 50px;
+    }
+    .LogoBox img{
+        width: auto;
+        height: 50px;
+    }
+    .Content_404 {
+        display: flex;
+        grid-template-columns: 100%;
+        padding-top: 0px;
+    }
+    .MessageText {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Illus {
+        display: none;
+    }
+    .Container::before {
+        content: none;
+    }
+}
+@media screen and (max-width: 780px) {
+    .Container {
+        max-width: 100%;
+        width: auto;
+    }
+}
+@media screen and (max-width: 576px) {
+    .Content_404 {
+        padding: 15px;
+    }
+    br{
+        display: none;
+    }
+    .H1-Jost {
+        font-size: 52px;
+        line-height: 86px;
+    }
+    .H1-Jost:before {
+        left: -25px;
+        top: -9px;
+    }
+    .H2-Jost {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .MessageText button {
+        margin-top: 28px;
+    }
+    .Dark-Btn, .Soft-Btn {
+        font-size: 18px;
+        font-weight: 500;
+        width: 160px;
+        height: 50px;
+        border-radius: 12px 12px 0px 12px;
+    }
+    .Navbar ul {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        background-color: rgb(222, 244, 255);
+        border-radius: 0px;
+        padding: 15px;
+        border: 0;
+        border-top: 2px solid rgb(255 255 255);
+        border-bottom: 2px solid rgb(255 255 255);
+        z-index: 9;
+    }
 }
